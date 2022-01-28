@@ -2,6 +2,7 @@
 A text generation AI in Java
 
 > **What is this?**
+
 This is a generational AI that can generate whatever you want, as long as your dataset is parsed correctly
 
 > **How does this work?**
