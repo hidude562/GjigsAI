@@ -19,7 +19,7 @@ class Main {
 
     public static void main(String[] args) throws IOException {
 
-        System.out.print("Enter text file path:");
+        System.out.println("Enter text file path:");
         BufferedReader input_path = new BufferedReader(
                 new InputStreamReader(System.in));
 
@@ -27,8 +27,12 @@ class Main {
         Path path = Paths.get(file);
         BufferedReader bufferedReader = Files.newBufferedReader(path);
         String parse_string = buffered2string(bufferedReader);
+        System.out.println("Enter parseable character:");
+        BufferedReader parse_char_input = new BufferedReader(
+                new InputStreamReader(System.in));
 
-        String parse_char = " "; //The character you parse your dataset and input on
+        String parse_char = parse_char_input.readLine(); //The character you parse your dataset and input on
+        System.out.println(parse_char);
 
         String[] parsed = parse_string.split(parse_char);
         String temp;
